@@ -6,7 +6,15 @@ connectDB();
 const app = express();
 app.use(express.json({ limit: "30mb", extended: true }));
 app.use(express.urlencoded({ limit: "30mb", extended: true }));
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://yehweh.vercel.app/",
+    credentials: true,
+    methods: "GET,PUT,POST,OPTIONS",
+    allowedHeaders: "Content-Type,Authorization",
+  })
+);
+// view engine setup
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
