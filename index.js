@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import connectDB from "./connectMongoDB.js";
+import connectDB from "./api/connectMongoDB.js";
 import assesmentRoutes from "./routes/Assesments.js";
 connectDB();
 const app = express();
@@ -14,7 +14,6 @@ app.use(
     allowedHeaders: "Content-Type,Authorization",
   })
 );
-// view engine setup
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
