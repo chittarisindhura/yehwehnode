@@ -11,7 +11,7 @@ app.use(
     origin: true,
     credentials: true,
     methods: "GET,PUT,POST,OPTIONS",
-    allowedHeaders: "Content-Type,Authorization",
+    // allowedHeaders: "Content-Type,Authorization",
   })
 );
 app.get("/", (req, res) => {
