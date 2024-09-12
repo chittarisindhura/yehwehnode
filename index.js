@@ -8,7 +8,7 @@ app.use(express.json({ limit: "30mb", extended: true }));
 app.use(express.urlencoded({ limit: "30mb", extended: true }));
 app.use(
   cors({
-    origin: "https://yehweh.vercel.app/",
+    origin: true,
     credentials: true,
     methods: "GET,PUT,POST,OPTIONS",
     allowedHeaders: "Content-Type,Authorization",
