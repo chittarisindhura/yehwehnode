@@ -1,9 +1,7 @@
 import mongoose from "mongoose";
 const AssesmentSchema = mongoose.Schema({
-  assesmentId: { type: String },
   title: { type: String },
   type: { type: String },
-  questionType: { type: String },
   questionBank: { type: String },
   multipleChoice: { type: Array },
   shortAnswer: { type: Array },
